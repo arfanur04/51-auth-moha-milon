@@ -9,11 +9,14 @@ import Register from "./components/Register/Register";
 import AuthProvider from "./providers/AuthProvider";
 import Orders from "./components/Orders/Orders";
 import PrivetRoutes from "./routes/PrivetRoutes";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
+import Profile from "./components/Profile/Profile";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Root />,
+		errorElement: <ErrorPage></ErrorPage>,
 		children: [
 			{
 				path: "/",
@@ -32,6 +35,14 @@ const router = createBrowserRouter([
 				element: (
 					<PrivetRoutes>
 						<Orders></Orders>
+					</PrivetRoutes>
+				),
+			},
+			{
+				path: "/profile",
+				element: (
+					<PrivetRoutes>
+						<Profile></Profile>
 					</PrivetRoutes>
 				),
 			},

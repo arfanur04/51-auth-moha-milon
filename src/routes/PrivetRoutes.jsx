@@ -19,8 +19,8 @@ const PrivetRoutes = ({ children }) => {
 	return <Navigate to={"/login"}></Navigate>;
 };
 
+export default PrivetRoutes;
+
 PrivetRoutes.propTypes = {
 	children: PropTypes.node,
 };
-
-export default PrivetRoutes;
